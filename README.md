@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+### About the game:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This game tests the memory power of an individual. You can try this game [here](https://rishikakota.github.io/Emoji-Game/)
 
-## Available Scripts
+### How to play:
 
-In the project directory, you can run:
+Click on different emoji each time until u click all the emojis present to win. Clicking on the same emoji twice results in failure of the game. 
 
-### `npm start`
+### Refer to the image below:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<details>
+<summary>Click to view</summary>
+    
+<br/>
+<div style="text-align: center;">
+    <img src="https://assets.ccbp.in/frontend/content/react-js/emoji-game-output-v2.gif" alt="emoji-game-output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
+</div>
+<br/>
+    
+</details>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Design Files
 
-### `npm test`
+<details>
+<summary>Click to view</summary>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Extra Small (Size < 576px), Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/emoji-game-sm-outputs.png)
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Game View](https://assets.ccbp.in/frontend/content/react-js/emoji-game-lg-output-v2.png)
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Won Game](https://assets.ccbp.in/frontend/content/react-js/emoji-game-won-game-lg-output.png)
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Lose Game](https://assets.ccbp.in/frontend/content/react-js/emoji-game-lose-game-lg-output.png)
 
-### `npm run build`
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Set Up Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+<summary>Click to view</summary>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Download dependencies by running `npm install`
+- Start up the app using `npm start`
+</details>
 
-### `npm run eject`
+### Functionalities
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<details>
+<summary>Click to view</summary>
+<br/>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The app has the following functionalities
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Initially, the _Score_ and _Total Score_ for the current game should be **0**
+- When an **Emoji** is clicked,
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  - If it is not the same as any of the previously clicked emojis, then the _Score_ will be incremented by one
+  - If all the emojis are clicked exactly once
 
-## Learn More
+    - [Won Game](https://assets.ccbp.in/frontend/content/react-js/emoji-game-won-game-lg-output.png) view will be displayed
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - If it is the same as any of the previously clicked emojis
+    - [Lose Game](https://assets.ccbp.in/frontend/content/react-js/emoji-game-lose-game-lg-output.png) view will be displayed
+  - If the score achieved in the current game is higher than the previous scores then the _Top Score_ will be updated accordingly
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- When the _Play Again_ button is clicked, then we will be able to play the game again
+  - The _Score_ value will be reset but not the _Top Score_ value
+- The `EmojiGame` component receives the `emojisList` as a prop. It consists of a list of emoji objects with the following properties in each emoji object
 
-### Code Splitting
+  |    Key    | Data Type |
+  | :-------: | :-------: |
+  |    id     |  Number   |
+  | emojiName |  String   |
+  | emojiUrl  |  String   |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+</details>
 
-### Analyzing the Bundle Size
+<details>
+<summary>Components Structure</summary>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<br/>
+<div style="text-align: center;">
+    <img src="https://assets.ccbp.in/frontend/content/react-js/emoji-game-game-view-component-breakdown-structure.png" alt="emoji game view component breakdown structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
+</div>
+<br/>
 
-### Making a Progressive Web App
+<div style="text-align: center;">
+    <img src="https://assets.ccbp.in/frontend/content/react-js/emoji-game-win-lose-component-breakdown-structure.png" alt="emoji game win or lose component breakdown structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
+</div>
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+</details>
 
-### Advanced Configuration
+### Resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<details>
+<summary>Image URLs</summary>
 
-### Deployment
+- [https://assets.ccbp.in/frontend/react-js/game-logo-img.png](https://assets.ccbp.in/frontend/react-js/game-logo-img.png)
+- [https://assets.ccbp.in/frontend/react-js/won-game-img.png](https://assets.ccbp.in/frontend/react-js/won-game-img.png)
+- [https://assets.ccbp.in/frontend/react-js/lose-game-img.png](https://assets.ccbp.in/frontend/react-js/lose-game-img.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+</details>
 
-### `npm run build` fails to minify
+<details>
+<summary>Colors</summary>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br/>
+
+<div style="background-color: #6a59ff ; width: 150px; padding: 10px; color: white">Hex: #6a59ff</div>
+<div style="background-color: #ffffff ; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
+<div style="background-color: #3d3d3d ; width: 150px; padding: 10px; color: white">Hex: #3d3d3d</div>
+
+#### Background Colors
+
+<div style="background-color: #9796f0 ; width: 150px; padding: 10px; color: white">Hex: #9796f0</div>
+<div style="background-color: #fbc7d4 ; width: 150px; padding: 10px; color: black">Hex: #fbc7d4</div>
+<div style="background-color: #ffffff33 ; width: 150px; padding: 10px; color: black">Hex: #ffffff33</div>
+<div style="background-color: #ffce27 ; width: 150px; padding: 10px; color: black">Hex: #ffce27</div>
+
+#### Border Colors
+
+<div style="background-color: #ffffff30 ; width: 150px; padding: 10px; color: black">Hex: #ffffff30</div>
+
+</details>
+
+<details>
+<summary>Font-families</summary>
+
+- Roboto
+
+</details>
