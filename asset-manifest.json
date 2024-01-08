@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.59a2639c.css",
-    "main.js": "/react-gh-pages/static/js/main.f28ccf0f.js",
-    "index.html": "/react-gh-pages/index.html",
-    "main.59a2639c.css.map": "/react-gh-pages/static/css/main.59a2639c.css.map",
-    "main.f28ccf0f.js.map": "/react-gh-pages/static/js/main.f28ccf0f.js.map"
+    "main.css": "/Emoji-Game/static/css/main.59a2639c.css",
+    "main.js": "/Emoji-Game/static/js/main.f28ccf0f.js",
+    "index.html": "/Emoji-Game/index.html",
+    "main.59a2639c.css.map": "/Emoji-Game/static/css/main.59a2639c.css.map",
+    "main.f28ccf0f.js.map": "/Emoji-Game/static/js/main.f28ccf0f.js.map"
   },
   "entrypoints": [
     "static/css/main.59a2639c.css",
